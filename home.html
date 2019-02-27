@@ -13,11 +13,57 @@
          the initial-scale=1 part sets the initialize zoom level when the page
             is first loaded by the browser.
      -->
-     <title>Women's Self Defense</title>
+
+    <title>Women's Self Defense</title>
+
+    <!--include boostrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+
+
+    <!-- required scripts for IE -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--include stylesheet-->
+    <link rel="stylesheet" href="styles/styling.css" />
      
 </head>
 
 <body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <a href="home.html" class="navbar-left"><img src="EmpowerLogo.png" alt="Empower Logo" width="250" height="60"></a>
+
+            <!--WHY IS THIS TOGGLER NOT WORKING?!-->
+            <!-- <div class="container">    -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- </div> -->
+
+            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="videos.html">Training Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="curriculum.html">Curriculum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testimonials.html">Testimonials</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+
 
 </body>
 </html>
