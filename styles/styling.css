@@ -11,3 +11,32 @@
     color: white;
 }
 
+.col-md-12{
+    padding-top: 10px;
+    border-bottom: solid 1px black;
+}
+
+body{
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+.curriculum{
+    font-size: 20px;
+}
+
+/*This link to image is not working*/
+.jumbotron {
+    background-image: url("/self-defense-jumbotron.jpg");
+    background-size: cover;
+}
+
+#jumbo-words{
+    color: purple;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
