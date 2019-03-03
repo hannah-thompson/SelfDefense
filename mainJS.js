@@ -1,14 +1,17 @@
-function setFocus() {
-    let title = document.getElementById("title");
-    title.focus();
-}
-
-document.getElementById("title").autofocus;
-
 testSubmit = document.getElementById("testSubmit");
+testCancel = document.getElementById("testCancel")
 
 author = document.getElementById("author");
 anon = document.getElementById("anon");
-if(anon.checked){
-    author.disable();
+
+function submitTest() {
+    
+    window.location.href = "testimonials.html";
 }
+
+function cancel() {
+    window.location.href = "testimonials.html";
+}
+
+testCancel.addEventListener("click", cancel);
+testSubmit.addEventListener("click", submitTest);
