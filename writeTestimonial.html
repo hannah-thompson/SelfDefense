@@ -30,6 +30,7 @@
 </head>
 
 <body>
+<section class="fixed-top">
 <header>
     <nav class="navbar navbar-expand-md navbar-dark">
         <a href="home.html" class="navbar-left"><img src="EmpowerLogo.png" alt="Empower Logo" width="250" height="60"></a>
@@ -69,7 +70,35 @@
         <li class="breadcrumb-item active" aria-current="page">Write Own</li>
     </ol>
 </nav>
+</section>
 
+<form class="main form-center center" id="testForm">
+    <div class="form-group has-warning">
+        <label for="title">Title</label>
+        <input type="text" class="form-control form-control-warning" id="title" required placeholder="Enter title">
+        <div class="form-control-feedback">Please provide a title</div>
+    </div>
+
+    <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" class="form-control" id="author" placeholder="Enter name">
+        or
+        <div class="form-check">
+            <label class="form-check-label" style="font-size: medium">
+                <input id="anon" type="checkbox" class="form-check-input">
+                Remain anonymous
+            </label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="testimonial">Testimonial</label>
+        <textarea class="form-control" id="testimonial" rows="5" required placeholder="Please provide your testimonial"></textarea>
+    </div>
+
+    <button type="submit" id="testSubmit" class="btn btn-primary">Submit</button>
+    <button class="btn btn-secondary">Cancel</button>
+</form>
 
 </body>
 </html>

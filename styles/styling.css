@@ -3,6 +3,7 @@
     background-color: purple;
     color: white;
     font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    top: 0;
 }
 
 /* Link */
@@ -39,4 +40,23 @@ body{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+.main {
+    padding-top: 125px;
+}
+
+.form-center {
+    width: 75%;
+    padding-top: 140px;
+}
+
+#write-testimonial{
+    float: right;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+#testimonial {
+    resize: horizontal;
 }
