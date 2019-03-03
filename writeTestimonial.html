@@ -76,23 +76,19 @@
     <div class="form-group">
         <label for="title">Title</label>
         <input type="text" class="form-control" id="title" placeholder="Enter title" autofocus>
+        <span class="error" id="title-note"></span>
     </div>
 
     <div class="form-group">
         <label for="author">Author</label>
-        <input type="text" class="form-control" id="author" placeholder="Enter name">
-        or
-        <div class="form-check">
-            <label class="form-check-label" style="font-size: medium">
-                <input id="anon" type="checkbox" class="form-check-input">
-                Remain anonymous
-            </label>
-        </div>
+        <input type="text" class="form-control" id="author" placeholder="Enter name" value="Anonymous">
+        <small id="emailHelp" class="form-text text-muted">Leave this field empty to remain anonymous</small>
     </div>
 
     <div class="form-group">
         <label for="testimonial">Testimonial</label>
         <textarea class="form-control" id="testimonial" rows="5" placeholder="Please provide your testimonial"></textarea>
+        <span class="error" id="test-note"></span>
     </div>
 
     <input type="button" id="testSubmit" class="btn btn-primary" value="Submit">
