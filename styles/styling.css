@@ -79,6 +79,10 @@ body{
     font-size: medium;
 }
 
+.col-md-4{
+    margin-top: 10px;
+}
+
 /*for mobile screens*/
 @media only screen and (max-width: 600px){
 
