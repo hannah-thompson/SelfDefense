@@ -68,3 +68,9 @@ body{
 #testimonial {
     resize: horizontal;
 }
+
+.error{
+    color: red;
+    font-style: italic;
+    font-size: medium;
+}
