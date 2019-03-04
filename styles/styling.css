@@ -1,3 +1,7 @@
+
+
+/* NOTE: NEED TO ADD IN TWO THAT HAPPEN WITH AN ACTION (THINK: HOVER)*/
+
 /* override styles to navbar */
 .navbar-expand-md{
     background-color: purple;
@@ -73,4 +77,15 @@ body{
     color: red;
     font-style: italic;
     font-size: medium;
+}
+
+/*for mobile screens*/
+@media only screen and (max-width: 600px){
+
+    /*change video size*/
+    #focusVideo{
+        width: 300px;
+        height:200px;
+    }
+
 }
