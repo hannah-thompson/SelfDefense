@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17516379-5e24-4529-9d41-7855f303cfeb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/focusVideo.html" beforeDir="false" afterPath="$PROJECT_DIR$/focusVideo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/styling.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videos.html" beforeDir="false" afterPath="$PROJECT_DIR$/videos.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,10 +23,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/videos.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
+            <state relative-caret-position="1470">
               <caret line="98" column="107" selection-start-line="98" selection-start-column="107" selection-end-line="98" selection-end-column="107" />
             </state>
           </provider>
@@ -35,7 +35,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testimonials.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-751">
+            <state relative-caret-position="270">
               <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
             </state>
           </provider>
@@ -44,17 +44,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainJS.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
+            <state relative-caret-position="900">
               <caret line="60" column="49" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/styles/styling.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+            <state relative-caret-position="530">
+              <caret line="96" column="5" lean-forward="true" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -62,7 +62,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/curriculum.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
+            <state relative-caret-position="1200">
               <caret line="80" column="34" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
             </state>
           </provider>
@@ -71,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/focusVideo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="84" column="123" selection-start-line="84" selection-start-column="123" selection-end-line="84" selection-end-column="123" />
+            <state relative-caret-position="395">
+              <caret line="85" column="39" selection-start-line="85" selection-start-column="39" selection-end-line="85" selection-end-column="39" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -84,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/focusCurriculum.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="107" selection-end-column="10" />
+            <state relative-caret-position="388">
+              <caret line="97" column="107" selection-start-line="97" selection-start-column="107" selection-end-line="97" selection-end-column="107" />
             </state>
           </provider>
         </entry>
@@ -106,16 +106,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/css/boostrap.min.css" />
-        <option value="$PROJECT_DIR$/focusCurriculum.html" />
         <option value="$PROJECT_DIR$/focusTestimonial.html" />
         <option value="$PROJECT_DIR$/home.html" />
         <option value="$PROJECT_DIR$/writeTestimonial.html" />
         <option value="$PROJECT_DIR$/testimonials.html" />
         <option value="$PROJECT_DIR$/mainJS.js" />
         <option value="$PROJECT_DIR$/curriculum.html" />
-        <option value="$PROJECT_DIR$/styles/styling.css" />
-        <option value="$PROJECT_DIR$/focusVideo.html" />
         <option value="$PROJECT_DIR$/videos.html" />
+        <option value="$PROJECT_DIR$/focusCurriculum.html" />
+        <option value="$PROJECT_DIR$/focusVideo.html" />
+        <option value="$PROJECT_DIR$/styles/styling.css" />
       </list>
     </option>
   </component>
@@ -133,6 +133,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -150,7 +151,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -195,7 +195,8 @@
       <workItem from="1551633550355" duration="20894000" />
       <workItem from="1551728218693" duration="123000" />
       <workItem from="1551728643202" duration="126000" />
-      <workItem from="1551736855004" duration="2482000" />
+      <workItem from="1551736855004" duration="2598000" />
+      <workItem from="1551809792934" duration="58000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed header; start on testimonial">
       <created>1551644902364</created>
@@ -222,13 +223,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34249000" />
+    <option name="totallyTimeSpent" value="34423000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="729" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13812602" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13974153" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -314,31 +315,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/videos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="98" column="107" selection-start-line="98" selection-start-column="107" selection-end-line="98" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/testimonials.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-751">
+        <state relative-caret-position="270">
           <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mainJS.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
+        <state relative-caret-position="900">
           <caret line="60" column="49" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/styling.css">
+    <entry file="file://$PROJECT_DIR$/curriculum.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+        <state relative-caret-position="1200">
+          <caret line="80" column="34" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/focusCurriculum.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="97" column="107" selection-start-line="97" selection-start-column="107" selection-end-line="97" selection-end-column="107" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/focusVideo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="84" column="123" selection-start-line="84" selection-start-column="123" selection-end-line="84" selection-end-column="123" />
+        <state relative-caret-position="395">
+          <caret line="85" column="39" selection-start-line="85" selection-start-column="39" selection-end-line="85" selection-end-column="39" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -346,24 +361,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/curriculum.html">
+    <entry file="file://$PROJECT_DIR$/styles/styling.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="80" column="34" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/focusCurriculum.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="107" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/videos.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="98" column="107" selection-start-line="98" selection-start-column="107" selection-end-line="98" selection-end-column="107" />
+        <state relative-caret-position="530">
+          <caret line="96" column="5" lean-forward="true" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
         </state>
       </provider>
     </entry>

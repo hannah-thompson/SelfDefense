@@ -92,4 +92,8 @@ body{
         height:200px;
     }
 
+    #focusVideoLabel{
+        font-size: 20px;
+    }
+
 }
