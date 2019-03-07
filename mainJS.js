@@ -15,7 +15,9 @@ let testimonialList = [
 testSubmit = document.getElementById("testSubmit");
 testCancel = document.getElementById("testCancel");
 
-function submitTest() {
+
+//Arrow Function
+submitTest = () => {
     let title = document.getElementById("title").value;
     let author = document.getElementById("author").value;
     let testimonial = document.getElementById("testimonial").value;
@@ -46,7 +48,9 @@ function submitTest() {
 
 }
 
-function cancel() {
+
+//Anonymous Function
+cancel = function () {
     window.location.href = "testimonials.html";
 }
 
