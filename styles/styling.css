@@ -5,16 +5,10 @@
 /* override styles to navbar */
 .navbar-expand-md{
     background-color: purple;
-    color: white;
     font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
     top: 0;
 }
 
-/* Link */
-/*having trouble changing link font color*/
-.navbar-default .navbar-nav .nav-link{
-    color: white;
-}
 
 .col-md-12{
     padding-top: 10px;
