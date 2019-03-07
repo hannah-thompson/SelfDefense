@@ -1,30 +1,37 @@
-
-
-/* NOTE: NEED TO ADD IN TWO THAT HAPPEN WITH AN ACTION (THINK: HOVER)*/
-
-/* override styles to navbar */
+/* override styles to navbar: background purple, set font family */
 .navbar-expand-md{
     background-color: purple;
-    color: white;
     font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
     top: 0;
 }
 
-/* Link */
-/*having trouble changing link font color*/
-.navbar-default .navbar-nav .nav-link{
+/*change navbar links to be white*/
+.navbar-dark .navbar-nav .nav-link{
     color: white;
 }
 
+/*if hover over link in nav bar will turn light grey*/
+.navbar-dark .navbar-nav .nav-link:hover{
+    color: lightgrey;
+}
+
+/*hovering over links turns them purple*/
+a:hover{
+    color: purple;
+}
+
+/*add border an padding for curriculum elements*/
 .col-md-12{
     padding-top: 10px;
     border-bottom: solid 1px black;
 }
 
+/*set font family for site*/
 body{
     font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
 
+/*set font size for curriculum elements*/
 .curriculum{
     font-size: 20px;
 }
@@ -35,10 +42,12 @@ body{
     background-size: cover;
 }
 
+/*set font color to purple in jumbotron*/
 #jumbo-words{
     color: purple;
 }
 
+/*used to center material*/
 .center {
     display: block;
     margin-left: auto;
@@ -62,6 +71,7 @@ body{
     padding-top: 140px;
 }
 
+/*testimonial writing attributes*/
 #write-testimonial{
     float: right;
     margin-top: 2px;
@@ -79,11 +89,12 @@ body{
     font-size: medium;
 }
 
+/*add padding to col-md-4*/
 .col-md-4{
     margin-top: 10px;
 }
 
-/*for mobile screens*/
+/*for mobile screens, resize video elements*/
 @media only screen and (max-width: 600px){
 
     /*change video size*/
