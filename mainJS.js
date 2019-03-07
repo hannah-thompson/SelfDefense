@@ -1,3 +1,5 @@
+// Authors: Hannah Thompson and Sarah Piekarski
+
 let testimonialList = [
     {title: "Testimonial 1", author: "Anonymous", testimonial: "Lorem ipsum dolor sit amet, falli quidam singulis ei sea, esse mutat moderatius in sed.\n" +
             "                Cu sed doctus praesent dissentiet, cum ei graece fabulas dissentiet. Sumo falli eu sit, est tibique\n" +
