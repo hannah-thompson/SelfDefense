@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="17516379-5e24-4529-9d41-7855f303cfeb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curriculum.html" beforeDir="false" afterPath="$PROJECT_DIR$/curriculum.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/focusCurriculum.html" beforeDir="false" afterPath="$PROJECT_DIR$/focusCurriculum.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/focusTestimonial.html" beforeDir="false" afterPath="$PROJECT_DIR$/focusTestimonial.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/focusVideo.html" beforeDir="false" afterPath="$PROJECT_DIR$/focusVideo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/styling.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/styling.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimonials.html" beforeDir="false" afterPath="$PROJECT_DIR$/testimonials.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videos.html" beforeDir="false" afterPath="$PROJECT_DIR$/videos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/writeTestimonial.html" beforeDir="false" afterPath="$PROJECT_DIR$/writeTestimonial.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1074">
-              <caret line="102" column="95" lean-forward="true" selection-start-line="100" selection-start-column="4" selection-end-line="102" selection-end-column="95" />
+            <state relative-caret-position="465">
+              <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -63,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/styles/styling.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            <state relative-caret-position="425">
+              <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
             </state>
           </provider>
         </entry>
@@ -131,7 +123,6 @@
       <list>
         <option value="$PROJECT_DIR$/css/boostrap.min.css" />
         <option value="$PROJECT_DIR$/mainJS.js" />
-        <option value="$PROJECT_DIR$/home.html" />
         <option value="$PROJECT_DIR$/curriculum.html" />
         <option value="$PROJECT_DIR$/focusCurriculum.html" />
         <option value="$PROJECT_DIR$/focusTestimonial.html" />
@@ -139,6 +130,7 @@
         <option value="$PROJECT_DIR$/testimonials.html" />
         <option value="$PROJECT_DIR$/videos.html" />
         <option value="$PROJECT_DIR$/writeTestimonial.html" />
+        <option value="$PROJECT_DIR$/home.html" />
         <option value="$PROJECT_DIR$/styles/styling.css" />
       </list>
     </option>
@@ -222,7 +214,7 @@
       <workItem from="1551736855004" duration="2598000" />
       <workItem from="1551809792934" duration="132000" />
       <workItem from="1551814302515" duration="700000" />
-      <workItem from="1551974865250" duration="1552000" />
+      <workItem from="1551974865250" duration="2548000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed header; start on testimonial">
       <created>1551644902364</created>
@@ -249,7 +241,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36749000" />
+    <option name="totallyTimeSpent" value="37745000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="729" extended-state="6" />
@@ -356,13 +348,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testimonials.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="116" column="4" selection-start-line="116" selection-start-column="4" selection-end-line="119" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/videos.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="470">
@@ -380,17 +365,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/testimonials.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="116" column="4" selection-start-line="116" selection-start-column="4" selection-end-line="119" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1074">
-          <caret line="102" column="95" lean-forward="true" selection-start-line="100" selection-start-column="4" selection-end-line="102" selection-end-column="95" />
+        <state relative-caret-position="465">
+          <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/styling.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="425">
+          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
         </state>
       </provider>
     </entry>
