@@ -32,6 +32,38 @@
 </head>
 
 <body>
+
+<!--get info from last page-->
+<?php
+
+    $week_number = $_GET['week'];
+    echo $week_number;
+
+    // will allow us to use errors
+    //libxml_use_internal_errors(true);
+
+    // get your XML locally (keep room for error
+    $xml = simplexml_load_file("curriculum.xml") or die("Error: Can not create object");
+
+
+    // ERROR HANDLING
+    // if xml failed, print all errors
+    if($xml == false){
+        foreach(libxml_get_errors() as $error){
+            // gets message attribute from error
+            echo"$error->message <br/>";
+    }
+    }
+
+    // get info
+    $title= $xml->week[$week_number-1]->title;
+    $text= $xml->week[$week_number-1]->text;
+    $text2= $xml->week[$week_number-1]->text2;
+    $videoLink= $xml->week[$week_number-1]->videoLink;
+    $videoName= $xml->week[$week_number-1]->videoName;
+
+?>
+
 <section class="fixed-top">
 <header>
     <nav class="navbar navbar-expand-md navbar-dark">
@@ -64,12 +96,15 @@
 
 </header>
 
+
+
+
 <!--add breadcrumb trail-->
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="home.html">Home</a></li>
         <li class="breadcrumb-item"><a href="curriculum.html">Curriculum</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Week 1</li>
+        <li class="breadcrumb-item active" aria-current="page">Week <?php echo $week_number; ?></li>
     </ol>
 </nav>
 </section>
@@ -78,26 +113,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <h1><b>Week 1</b></h1>
-                <h3>Palm + Hammer Strikes</h3>
-                <p>Palm + Hammer Strikes Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-                    ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                    consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.<br><br> Neque porro
-                    quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
-                    quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                    voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-                    laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit
-                    qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum
-                    fugiat quo voluptas nulla pariatur?
+                <h1><b>Week <?php echo $week_number; ?></b></h1>
+                <h3><?php echo $title; ?></h3>
+                <p><?php echo $text ."<br/><br/>" .$text2;?>
                 </p>
             </div>
             <!--add in actual video here later-->
             <div class="col-md-4 align-self-center" align="center">
                 <!--add in actual video later-->
-                <iframe width ="200" height="200" src="https://www.youtube.com/embed/yyTc9OGqYTo"></iframe>
-                <h4><a href="focusVideo.html">Palm Strikes + Hammer Training Video</a></h4>
+                <iframe width ="200" height="200" src="<?php echo $videoLink; ?>"></iframe>
+                <h4><a href="focusVideo.html"><?php echo $videoName; ?></a></h4>
             </div>
         </div>
     </div>
