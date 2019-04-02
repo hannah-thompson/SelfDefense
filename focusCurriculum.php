@@ -106,7 +106,7 @@ $videoName= $xml->week[$week_number-1]->videoName;
             <div class="col-md-4 align-self-center" align="center">
                 <!--add in actual video later-->
                 <iframe width ="200" height="200" src="<?php echo $videoLink; ?>"></iframe>
-                <h4><a href="focusVideo.html"><?php echo $videoName; ?></a></h4>
+                <h4><a href="focusVideo.php?week=<?php echo $week_number; ?>"><?php echo $videoName; ?></a></h4>
             </div>
         </div>
     </div>
