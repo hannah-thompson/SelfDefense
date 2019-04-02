@@ -33,6 +33,35 @@
 </head>
 
 <body>
+<?php
+
+$week_number = $_GET['week'];
+echo $week_number;
+
+// will allow us to use errors
+//libxml_use_internal_errors(true);
+
+// get your XML locally (keep room for error
+$xml = simplexml_load_file("videos.xml") or die("Error: Can not create object");
+
+
+// ERROR HANDLING
+// if xml failed, print all errors
+if($xml == false){
+    foreach(libxml_get_errors() as $error){
+        // gets message attribute from error
+        echo"$error->message <br/>";
+    }
+}
+
+// get info
+$videoTitle= $xml->video[$week_number-1]->videoTitle;
+$videoLink= $xml->video[$week_number-1]->videoLink;
+$curriculumWeek= $xml->video[$week_number-1]->curriculumWeek;
+
+?>
+
+
 <section class="fixed-top">
 <header>
     <nav class="navbar navbar-expand-md navbar-dark">
@@ -70,7 +99,7 @@
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="home.html">Home</a></li>
         <li class="breadcrumb-item"><a href="videos.html">Training Videos</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Palm Strikes</li>
+        <li class="breadcrumb-item active" aria-current="page"><?php echo $videoTitle; ?></li>
     </ol>
 </nav>
 </section>
@@ -79,13 +108,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12" style="border-bottom: none;">
-                <h1><b>Palm Strikes</b></h1>
+                <h1><b><?php echo $videoTitle; ?></b></h1>
             </div>
             <!--add in actual video here later-->
             <div class="col-md-12 align-self-center" align="center" style="border-bottom: none;">
                 <!--add in actual video later-->
-                <iframe width ="550" height="350" src="https://www.youtube.com/embed/yyTc9OGqYTo" id="focusVideo"></iframe>
-                <h4 id="focusVideoLabel">See <a href="focusCurriculum.php">Week 1 Curriculum</a> for more details.</h4>
+                <iframe width ="550" height="350" src="<?php echo $videoLink; ?>" id="focusVideo"></iframe>
+                <h4 id="focusVideoLabel">See <a href="focusCurriculum.php?week=<?php echo $week_number; ?>">Week <?php echo $week_number; ?> Curriculum</a> for more details.</h4>
             </div>
         </div>
     </div>
