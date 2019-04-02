@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<videoList>
+    <video>
+        <videoNum>1</videoNum>
+        <videoLink>https://www.youtube.com/embed/yyTc9OGqYTo</videoLink>
+        <videoTitle>Palm + Hammer Strikes</videoTitle>
+        <curriculumWeek>1</curriculumWeek>
+    </video>
+
+    <video>
+        <videoNum>2</videoNum>
+        <videoLink>https://www.youtube.com/embed/2h-i5kVKJqI</videoLink>
+        <videoTitle>Kicks</videoTitle>
+        <curriculumWeek>2</curriculumWeek>
+    </video>
+
+    <video>
+        <videoNum>3</videoNum>
+        <videoLink>https://www.youtube.com/embed/v6KPcQwbIr4</videoLink>
+        <videoTitle>Trapping</videoTitle>
+        <curriculumWeek>3</curriculumWeek>
+    </video>
+
+    <video>
+        <videoNum>4</videoNum>
+        <videoLink>https://www.youtube.com/embed/m7wgQlmrmdc</videoLink>
+        <videoTitle>Couch Attacks</videoTitle>
+        <curriculumWeek>4</curriculumWeek>
+    </video>
+
+    <video>
+        <videoNum>5</videoNum>
+        <videoLink>https://www.youtube.com/embed/7xLV0LGB4As</videoLink>
+        <videoTitle>Standing Chokehold</videoTitle>
+        <curriculumWeek>5</curriculumWeek>
+    </video>
+
+    <video>
+        <videoNum>6</videoNum>
+        <videoLink>https://www.youtube.com/embed/OGqW507y-5E</videoLink>
+        <videoTitle>Ground Chokeholds</videoTitle>
+        <curriculumWeek>6</curriculumWeek>
+    </video>
+
+    <video>
+        <videoNum>7</videoNum>
+        <videoLink>https://www.youtube.com/embed/DFWwOwyC6_Y</videoLink>
+        <videoTitle>Ground Trapping</videoTitle>
+        <curriculumWeek>7</curriculumWeek>
+    </video>
+
+    <video>
+        <videoNum>8</videoNum>
+        <videoLink>https://www.youtube.com/embed/MQ-EPYKFie4</videoLink>
+        <videoTitle>Combining Techniques</videoTitle>
+        <curriculumWeek>8</curriculumWeek>
+    </video>
+
+
+</videoList>
