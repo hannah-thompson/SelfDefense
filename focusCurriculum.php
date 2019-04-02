@@ -8,6 +8,7 @@
            Mobile-first styles are part of the core framework.)
      -->
     <meta name="author" content="Hannah Thompson and Sarah Piekarski">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- the width=device-width part sets the width of the page to follow
             the screen-width of the device (which wil vary depending on the device)
@@ -15,7 +16,7 @@
             is first loaded by the browser.
      -->
 
-     <title>Curriculum</title>
+     <title>Training Video</title>
     <!--include boostrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
 
@@ -32,37 +33,34 @@
 </head>
 
 <body>
-
-<!--get info from last page-->
 <?php
 
-    $week_number = $_GET['week'];
-    echo $week_number;
+$week_number = $_GET['week'];
+echo $week_number;
 
-    // will allow us to use errors
-    //libxml_use_internal_errors(true);
+// will allow us to use errors
+//libxml_use_internal_errors(true);
 
-    // get your XML locally (keep room for error
-    $xml = simplexml_load_file("curriculum.xml") or die("Error: Can not create object");
+// get your XML locally (keep room for error
+$xml = simplexml_load_file("videos.xml") or die("Error: Can not create object");
 
 
-    // ERROR HANDLING
-    // if xml failed, print all errors
-    if($xml == false){
-        foreach(libxml_get_errors() as $error){
-            // gets message attribute from error
-            echo"$error->message <br/>";
+// ERROR HANDLING
+// if xml failed, print all errors
+if($xml == false){
+    foreach(libxml_get_errors() as $error){
+        // gets message attribute from error
+        echo"$error->message <br/>";
     }
-    }
+}
 
-    // get info
-    $title= $xml->week[$week_number-1]->title;
-    $text= $xml->week[$week_number-1]->text;
-    $text2= $xml->week[$week_number-1]->text2;
-    $videoLink= $xml->week[$week_number-1]->videoLink;
-    $videoName= $xml->week[$week_number-1]->videoName;
+// get info
+$videoTitle= $xml->video[$week_number-1]->videoTitle;
+$videoLink= $xml->video[$week_number-1]->videoLink;
+$curriculumWeek= $xml->video[$week_number-1]->curriculumWeek;
 
 ?>
+
 
 <section class="fixed-top">
 <header>
@@ -96,15 +94,12 @@
 
 </header>
 
-
-
-
 <!--add breadcrumb trail-->
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="home.html">Home</a></li>
-        <li class="breadcrumb-item"><a href="curriculum.html">Curriculum</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Week <?php echo $week_number; ?></li>
+        <li class="breadcrumb-item"><a href="videos.html">Training Videos</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><?php echo $videoTitle; ?></li>
     </ol>
 </nav>
 </section>
@@ -112,22 +107,18 @@
 <section class="highlight main">   <!-- 14. add section surrounding the grid, center it -->
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
-                <h1><b>Week <?php echo $week_number; ?></b></h1>
-                <h3><?php echo $title; ?></h3>
-                <p><?php echo $text ."<br/><br/>" .$text2;?>
-                </p>
+            <div class="col-md-12" style="border-bottom: none;">
+                <h1><b><?php echo $videoTitle; ?></b></h1>
             </div>
             <!--add in actual video here later-->
-            <div class="col-md-4 align-self-center" align="center">
+            <div class="col-md-12 align-self-center" align="center" style="border-bottom: none;">
                 <!--add in actual video later-->
-                <iframe width ="200" height="200" src="<?php echo $videoLink; ?>"></iframe>
-                <h4><a href="focusVideo.html"><?php echo $videoName; ?></a></h4>
+                <iframe width ="550" height="350" src="<?php echo $videoLink; ?>" id="focusVideo"></iframe>
+                <h4 id="focusVideoLabel">See <a href="focusCurriculum.php?week=<?php echo $week_number; ?>">Week <?php echo $week_number; ?> Curriculum</a> for more details.</h4>
             </div>
         </div>
     </div>
 </section>
-
 
     <!--need to get collapsible portion to work-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
