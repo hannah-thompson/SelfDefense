@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17516379-5e24-4529-9d41-7855f303cfeb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/curriculum.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curriculum.html" beforeDir="false" afterPath="$PROJECT_DIR$/curriculum.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/focusCurriculum.html" beforeDir="false" afterPath="$PROJECT_DIR$/focusCurriculum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/focusVideo.html" beforeDir="false" afterPath="$PROJECT_DIR$/focusVideo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/focusCurriculum.php" beforeDir="false" afterPath="$PROJECT_DIR$/focusCurriculum.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +16,7 @@
         <entry file="file://$PROJECT_DIR$/videos.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1740">
-              <caret line="116" column="4" selection-start-line="116" selection-start-column="4" selection-end-line="118" selection-end-column="50" />
+              <caret line="116" selection-start-line="116" selection-end-line="118" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -55,7 +51,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/curriculum.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="436">
@@ -64,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/focusCurriculum.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2010">
-              <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
+            <state relative-caret-position="427">
+              <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -85,19 +81,6 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EmpowerLogo.png">
           <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/focusVideo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="90" selection-start-line="90" selection-end-line="90" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -135,8 +118,8 @@
         <option value="$PROJECT_DIR$/styles/styling.css" />
         <option value="$PROJECT_DIR$/curriculum.html" />
         <option value="$PROJECT_DIR$/focusCurriculum.html" />
-        <option value="$PROJECT_DIR$/focusCurriculum.php" />
         <option value="$PROJECT_DIR$/curriculum.xml" />
+        <option value="$PROJECT_DIR$/focusCurriculum.php" />
       </list>
     </option>
   </component>
@@ -154,6 +137,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -170,8 +155,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -222,6 +205,7 @@
       <workItem from="1551974865250" duration="2548000" />
       <workItem from="1554152959108" duration="1939000" />
       <workItem from="1554155252548" duration="1177000" />
+      <workItem from="1554235125462" duration="29000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed header; start on testimonial">
       <created>1551644902364</created>
@@ -248,13 +232,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40861000" />
+    <option name="totallyTimeSpent" value="40890000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="728" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14781906" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15024233" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -327,10 +311,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/focusVideo.html" />
     <entry file="file://$PROJECT_DIR$/videos.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1740">
-          <caret line="116" column="4" selection-start-line="116" selection-start-column="4" selection-end-line="118" selection-end-column="50" />
+          <caret line="116" selection-start-line="116" selection-end-line="118" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -368,17 +353,6 @@
     <entry file="file://$PROJECT_DIR$/EmpowerLogo.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/focusVideo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/focusTestimonial.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1110">
@@ -386,17 +360,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/focusCurriculum.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2010">
-          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/curriculum.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="436">
           <caret line="151" column="60" selection-start-line="151" selection-start-column="60" selection-end-line="151" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/focusCurriculum.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
         </state>
       </provider>
     </entry>

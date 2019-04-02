@@ -35,13 +35,11 @@
 <body>
 <?php
 
-// add comment
-$week_number = 0;
 $week_number = $_GET['week'];
 echo $week_number;
 
 // will allow us to use errors
-//libxml_use_internal_errors(true);
+libxml_use_internal_errors(true);
 
 // get your XML locally (keep room for error
 $xml = simplexml_load_file("videos.xml") or die("Error: Can not create object");
