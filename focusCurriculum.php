@@ -35,6 +35,8 @@
 <body>
 <?php
 
+// add comment
+$week_number = 0;
 $week_number = $_GET['week'];
 echo $week_number;
 
