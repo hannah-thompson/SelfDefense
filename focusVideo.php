@@ -86,7 +86,7 @@ $curriculumWeek= $xml->video[$week_number-1]->curriculumWeek;
                     <a class="nav-link" href="curriculum.html">Curriculum</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="testimonials.html">Testimonials</a>
+                    <a class="nav-link" href="testimonials.php">Testimonials</a>
                 </li>
             </ul>
         </div>
