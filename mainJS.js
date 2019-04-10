@@ -78,7 +78,7 @@ function loadTestimonials(testimonials){
 }
 
 function details() {
-    window.location.href = "focusTestimonial.html";
+    window.location.href = "focusTestimonial.php";
 }
 
 if(testSubmit != null && testCancel != null){

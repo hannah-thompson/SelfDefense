@@ -36,7 +36,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-            <a href="home.html" class="navbar-left"><img src="EmpowerLogo.png" alt="Empower Logo" width="250" height="60"></a>
+            <a href="home.php" class="navbar-left"><img src="EmpowerLogo.png" alt="Empower Logo" width="250" height="60"></a>
 
             <!--WHY IS THIS TOGGLER NOT WORKING?!-->
             <!-- <div class="container">    -->
@@ -48,13 +48,13 @@
             <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="home.html">Home</a>
+                        <a class="nav-link" href="home.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="videos.html">Training Videos</a>
+                        <a class="nav-link" href="videos.php">Training Videos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="curriculum.html">Curriculum</a>
+                        <a class="nav-link" href="curriculum.php">Curriculum</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="testimonials.php">Testimonials</a>
@@ -64,6 +64,12 @@
         </nav>
 
     </header>
+
+    <?php session_start(); // make sessions available ?>
+    <?php
+    if (isset($_SESSION['user']))
+    {
+    ?>
 
     <!--add jumbotron with image background-->
     <div class="jumbotron main" >
@@ -99,6 +105,14 @@
             </div>
         </div>
     </section>
+
+        <?php
+    }
+    else
+    // redirect to the login page
+    header('Location: login.php');
+
+    ?>
 
     <!--need to get collapsible portion to work-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

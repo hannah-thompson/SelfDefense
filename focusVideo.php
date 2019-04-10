@@ -35,37 +35,40 @@
 <body>
 <?php
 
-$week_number = $_GET['week'];
-echo $week_number;
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $week_number = $_GET['week'];
+
 
 // will allow us to use errors
 //libxml_use_internal_errors(true);
 
 // get your XML locally (keep room for error
-$xml = simplexml_load_file("videos.xml") or die("Error: Can not create object");
+    $xml = simplexml_load_file("videos.xml") or die("Error: Can not create object");
 
 
 // ERROR HANDLING
 // if xml failed, print all errors
-if($xml == false){
-    foreach(libxml_get_errors() as $error){
-        // gets message attribute from error
-        echo"$error->message <br/>";
+    if ($xml == false) {
+        foreach (libxml_get_errors() as $error) {
+            // gets message attribute from error
+            echo "$error->message <br/>";
+        }
     }
-}
 
 // get info
-$videoTitle= $xml->video[$week_number-1]->videoTitle;
-$videoLink= $xml->video[$week_number-1]->videoLink;
-$curriculumWeek= $xml->video[$week_number-1]->curriculumWeek;
-
+    $videoTitle = $xml->video[$week_number - 1]->videoTitle;
+    $videoLink = $xml->video[$week_number - 1]->videoLink;
+    $curriculumWeek = $xml->video[$week_number - 1]->curriculumWeek;
+}else{
+    echo "Error loading page.";
+}
 ?>
 
 
 <section class="fixed-top">
 <header>
     <nav class="navbar navbar-expand-md navbar-dark">
-        <a href="home.html" class="navbar-left"><img src="EmpowerLogo.png" alt="Empower Logo" width="250" height="60"></a>
+        <a href="home.php" class="navbar-left"><img src="EmpowerLogo.png" alt="Empower Logo" width="250" height="60"></a>
 
         <!--WHY IS THIS TOGGLER NOT WORKING?!-->
         <!-- <div class="container">    -->
@@ -77,13 +80,13 @@ $curriculumWeek= $xml->video[$week_number-1]->curriculumWeek;
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="home.html">Home</a>
+                    <a class="nav-link" href="home.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="videos.html">Training Videos</a>
+                    <a class="nav-link" href="videos.php">Training Videos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="curriculum.html">Curriculum</a>
+                    <a class="nav-link" href="curriculum.php">Curriculum</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="testimonials.php">Testimonials</a>
@@ -94,11 +97,18 @@ $curriculumWeek= $xml->video[$week_number-1]->curriculumWeek;
 
 </header>
 
-<!--add breadcrumb trail-->
+    <?php session_start(); // make sessions available ?>
+    <?php
+    if (isset($_SESSION['user']))
+    {
+    ?>
+
+
+    <!--add breadcrumb trail-->
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="home.html">Home</a></li>
-        <li class="breadcrumb-item"><a href="videos.html">Training Videos</a></li>
+        <li class="breadcrumb-item"><a href="home.php">Home</a></li>
+        <li class="breadcrumb-item"><a href="videos.php">Training Videos</a></li>
         <li class="breadcrumb-item active" aria-current="page"><?php echo $videoTitle; ?></li>
     </ol>
 </nav>
@@ -119,6 +129,15 @@ $curriculumWeek= $xml->video[$week_number-1]->curriculumWeek;
         </div>
     </div>
 </section>
+
+
+<?php
+}
+else
+// redirect to the login page
+header('Location: login.php');
+
+?>
 
     <!--need to get collapsible portion to work-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
