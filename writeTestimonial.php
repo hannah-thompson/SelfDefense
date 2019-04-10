@@ -30,7 +30,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         else{
             $test_error = NULL;
             $testimonial = $_POST['testimonial'];
-            addTestimonial('user', $title, $author, $testimonial);
+            $user = $_SESSION['user'];
+            addTestimonial($user, $title, $author, $testimonial);
             header("Location: testimonials.php");
         }
     }

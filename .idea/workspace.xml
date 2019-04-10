@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17516379-5e24-4529-9d41-7855f303cfeb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curriculum.php" beforeDir="false" afterPath="$PROJECT_DIR$/curriculum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/focusCurriculum.php" beforeDir="false" afterPath="$PROJECT_DIR$/focusCurriculum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/focusTestimonial.php" beforeDir="false" afterPath="$PROJECT_DIR$/focusTestimonial.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/focusVideo.php" beforeDir="false" afterPath="$PROJECT_DIR$/focusVideo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimonials.php" beforeDir="false" afterPath="$PROJECT_DIR$/testimonials.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videos.php" beforeDir="false" afterPath="$PROJECT_DIR$/videos.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/writeTestimonial.php" beforeDir="false" afterPath="$PROJECT_DIR$/writeTestimonial.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/writeTestimonial.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="118" column="25" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
+            <state relative-caret-position="-931">
+              <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -70,7 +61,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
+            <state relative-caret-position="-479">
               <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
             </state>
           </provider>
@@ -197,7 +188,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554909445649" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554909605850" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -243,7 +234,7 @@
       <workItem from="1554152959108" duration="1939000" />
       <workItem from="1554155252548" duration="1177000" />
       <workItem from="1554235125462" duration="807000" />
-      <workItem from="1554826445649" duration="3445000" />
+      <workItem from="1554826445649" duration="3606000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed header; start on testimonial">
       <created>1551644902364</created>
@@ -301,11 +292,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554909163011</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added logout">
+      <created>1554909495639</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1554909495639</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45113000" />
+    <option name="totallyTimeSpent" value="45274000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="728" extended-state="6" />
@@ -389,7 +387,8 @@
     <MESSAGE value="fixed copy and past issue" />
     <MESSAGE value="all updated" />
     <MESSAGE value="added login" />
-    <option name="LAST_COMMIT_MESSAGE" value="added login" />
+    <MESSAGE value="added logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="added logout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -511,13 +510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testimonials.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="519">
@@ -532,10 +524,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-479">
+          <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/writeTestimonial.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="118" column="25" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
+        <state relative-caret-position="-931">
+          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
         </state>
       </provider>
     </entry>
