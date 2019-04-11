@@ -33,7 +33,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         // Check testimonial
         if(empty($_POST['testimonial'])){
             $test_error = "Please provide your testimonial";
-        }elseif($numPost > 3){
+        }elseif($numPost >= 3){
             $test_error = "You can not post more than 3 times in one hour.";
         }else{
             $test_error = NULL;
