@@ -110,3 +110,15 @@ body{
     }
 
 }
+
+.edit-button{
+    float: right;
+    font-size: small;
+    margin-right: 10px;
+}
+
+.delete-button{
+    float: right;
+    font-size: small;
+    color: red;
+}

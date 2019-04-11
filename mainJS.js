@@ -13,7 +13,7 @@ submitTest = () => {
     if (title === '')
     {
         document.getElementById("title").focus();
-        document.getElementById("title-note").innerHTML = "JS: Please provide a title";
+        document.getElementById("title-note").innerHTML = "Please provide a title";
         return false;
     }
     else {
@@ -25,7 +25,7 @@ submitTest = () => {
         if (testimonial === '')
         {
             document.getElementById("testimonial").focus();
-            document.getElementById("test-note").innerHTML = "JS: Please provide your testimonial";
+            document.getElementById("test-note").innerHTML = "Please provide your testimonial";
             return false;
         }
         else {
@@ -44,13 +44,27 @@ cancel = function () {
     window.location.href = "testimonials.php";
 };
 
-function loadTestimonials(testimonials){
+function loadTestimonials(testimonials, user){
     let list = document.getElementById("test-list");
     for(let i=0; i<testimonials.length;i++){
         let item = document.createElement("LI");
         item.className = "card center-wide";
         let card = document.createElement("DIV");
         card.className = "card-body";
+
+        let edit = document.createElement("A");
+        edit.href = "editTestimonial.php?title=" + testimonials[i].title;
+        edit.innerHTML = "Edit";
+        edit.className = "edit-button";
+
+        let del = document.createElement("A");
+        del.href = "deleteTestimonial.php?title=" + testimonials[i].title;
+        del.innerHTML = "Delete";
+        del.className = "delete-button";
+        del.value = testimonials[i].title;
+        del.onclick = deleteTestimonial;
+
+        let span = document.createElement("SPAN");
 
         let title = document.createElement("H5");
         title.className = "card-title title";
@@ -67,8 +81,13 @@ function loadTestimonials(testimonials){
         testimonial.appendChild(testVal);
         author.appendChild(authorVal);
         title.appendChild(titleVal);
-        title.addEventListener("click", details);
+        //title.addEventListener("click", details);
         title.cursor = "pointer";
+        if(user === testimonials[i].username){
+            span.appendChild(del);
+            span.appendChild(edit);
+            title.appendChild(span);
+        }
         card.appendChild(title);
         card.appendChild(author);
         card.appendChild(testimonial);
@@ -77,8 +96,15 @@ function loadTestimonials(testimonials){
     }
 }
 
-function details() {
-    window.location.href = "focusTestimonial.php";
+
+function deleteTestimonial() {
+    if(confirm("Are you sure you want to delete?")){
+        console.log("Confirmed");
+        window.location.href = "deleteTestimonial.php?=" + this.value;
+    }
+    else{
+        this.href = "";
+    }
 }
 
 if(testSubmit != null && testCancel != null){

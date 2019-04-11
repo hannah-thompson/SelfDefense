@@ -33,27 +33,46 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $test_error = NULL;
             $testimonial = $_POST['testimonial'];
             $user = $_SESSION['user'];
-            addTestimonial($user, $title, $author, $testimonial);
+//            echo $user . " " . $_GET['title'] . " " . $author . " " . $testimonial . " " . $title . "</br>";
+            editTestimonial($user, $_GET['title'], $author, $testimonial, $title);
             header("Location: testimonials.php");
         }
     }
 
 }
+
+$curr_val = getValues($_SESSION['user'], $_GET['title'])[0];
+$curr_author = $curr_val['author'];
+$curr_testimonial = $curr_val['testimonial'];
 ?>
 
 <?php
 
-function addTestimonial($user, $title, $author, $test){
+function editTestimonial($user, $title, $author, $test, $new_title){
+//    echo $user . " " . $title . " " . $author . " " . $test . " " . $new_title;
     require('connect-db.php');
-    $query = "INSERT INTO testimonials (username, title, author, testimonial, t) VALUES (:username, :title, :author, :testimonial, :t)";
+    $query = "UPDATE testimonials SET title=:new_title, author=:author, testimonial=:test WHERE username=:username and title=:title";
     $statement = $db->prepare($query);
     $statement->bindValue(':username', $user);
     $statement->bindValue(':title', $title);
     $statement->bindValue(':author', $author);
-    $statement->bindValue(':testimonial', $test);
-    $statement->bindValue(':t', time());
+    $statement->bindValue(':test', $test);
+    $statement->bindValue(':new_title', $new_title);
     $statement->execute();
     $statement->closeCursor();
+}
+
+function getValues($user, $title){
+    require('connect-db.php');
+    $query = "SELECT * FROM testimonials WHERE username = :username and title = :title";
+    $statement = $db->prepare($query);
+    $statement->bindValue(":username", $user);
+    $statement->bindValue(":title", $title);
+    $statement->execute();
+
+    $results = $statement->fetchAll();
+    $statement->closecursor();
+    return $results;
 }
 ?>
 
@@ -138,7 +157,7 @@ function addTestimonial($user, $title, $author, $test){
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="home.php">Home</a></li>
             <li class="breadcrumb-item"><a href="testimonials.php">Testimonials</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Write A Testimonial</li>
+            <li class="breadcrumb-item active" aria-current="page">Edit Testimonial</li>
         </ol>
     </nav>
 </section>
@@ -146,19 +165,22 @@ function addTestimonial($user, $title, $author, $test){
 <form class="main form-center center" id="testForm" action="<?php $_SERVER['PHP_SELF']?>" method="post" onsubmit="return(submitTest())">
     <div class="form-group">
         <label for="title">Title</label>
-        <input type="text" class="form-control" name="title" id="title" placeholder="Enter title" autofocus>
+        <input type="text" class="form-control" name="title" id="title" value = <?php echo '"' . $_GET['title'] . '"' ?>
+        placeholder="Enter title" autofocus>
         <span class="error" id="title-note"><?php echo $title_error?></span>
     </div>
 
     <div class="form-group">
         <label for="author">Author</label>
-        <input type="text" class="form-control" name="author" id="author" placeholder="Enter name">
+        <input type="text" class="form-control" name="author" id="author" value = <?php echo $curr_author?>
+        placeholder="Enter name">
         <small id="emailHelp" class="form-text text-muted">Leave this field empty to remain anonymous</small>
     </div>
 
     <div class="form-group">
         <label for="testimonial">Testimonial</label>
-        <textarea class="form-control" id="testimonial" name="testimonial" rows="5" placeholder="Please provide your testimonial"></textarea>
+        <textarea class="form-control" id="testimonial" name="testimonial" rows="5"
+                  placeholder="Please provide your testimonial"><?php echo $curr_testimonial?></textarea>
         <span class="error" id="test-note"><?php echo $test_error?></span>
     </div>
 
@@ -171,7 +193,7 @@ function addTestimonial($user, $title, $author, $test){
 }
 else
 // redirect to the login page
-header('Location: login.php');
+    header('Location: login.php');
 
 ?>
 

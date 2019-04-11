@@ -19,7 +19,6 @@ $dsn = "mysql:host=$hostname;dbname=$dbname";
 
 try {
     $db = new PDO($dsn, $username, $password);
-    //echo "<p> Connected to database</p>";
 }
 catch (PDOException $e){
     $error_message = $e->getMessage();

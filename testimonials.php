@@ -1,7 +1,9 @@
+<?php session_start(); // make sessions available ?>
+
 <?php
 require('connect-db.php');
 
-$query = "SELECT * FROM testimonials LIMIT 10";
+$query = "SELECT * FROM testimonials ORDER BY t DESC LIMIT 10";
 $statement = $db->prepare($query);
 $statement->execute();
 $results = $statement->fetchAll();
@@ -42,7 +44,11 @@ $statement->closecursor();
 
 </head>
 
-<body onload='loadTestimonials(<?php echo json_encode($results) ?>)'>
+<?php
+if (isset($_SESSION['user']))
+{
+?>
+<body onload='loadTestimonials(<?php echo json_encode($results); echo ', "' . $_SESSION['user'] . '"'?> )'>
 <section class="fixed-top">
     <header>
         <nav class="navbar navbar-expand-md navbar-dark">
@@ -79,11 +85,7 @@ $statement->closecursor();
     </header>
 
 
-    <?php session_start(); // make sessions available ?>
-    <?php
-    if (isset($_SESSION['user']))
-    {
-    ?>
+
 
     <!--add breadcrumb trail-->
     <nav aria-label="breadcrumb">
