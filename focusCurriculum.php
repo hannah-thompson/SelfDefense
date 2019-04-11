@@ -30,7 +30,7 @@
 <!--get info from last page-->
 <?php
 
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
+if($_SERVER['REQUEST_METHOD'] == 'GET') {
     $week_number = $_GET['week'];
 
 // will allow us to use errors
