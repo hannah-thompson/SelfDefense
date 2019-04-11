@@ -9,6 +9,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $title = NULL;
     $author = NULL;
     $testimonial = NULL;
+    if(isset($_COOKIE['numPost'])){
+        $numPost = $_COOKIE['numPost'];
+    }else{
+        $numPost = 0;
+    }
     // Check title
     if(empty($_POST['title'])){
         $title_error = "Please provide a title";
@@ -28,12 +33,21 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         // Check testimonial
         if(empty($_POST['testimonial'])){
             $test_error = "Please provide your testimonial";
-        }
-        else{
+        }elseif($numPost > 3){
+            $test_error = "You can not post more than 3 times in one hour.";
+        }else{
             $test_error = NULL;
             $testimonial = $_POST['testimonial'];
             $user = $_SESSION['user'];
             addTestimonial($user, $title, $author, $testimonial);
+            // create a cookie to track number of posts
+            if(!isset($_COOKIE['numPost'])){
+                setcookie('numPost', 1 , time()+3600);
+            }else{
+                $currentNum = $_COOKIE['numPost'];
+                // update cookie
+                setcookie('numPost', $currentNum+1 , time()+3600);
+            }
             header("Location: testimonials.php");
         }
     }
