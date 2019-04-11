@@ -22,10 +22,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && strlen($_POST['username']) > 0)
             reject('Password');
         else
         {
-            if(checkPassword($user, $pwd) == 0){
-                $login_error = "Username or password is incorrect, please try again";
+            if(checkUsername($user) > 0){
+                $login_error = "Username is already taken, please try again";
             }
             else {
+                createAccount($user, $pwd);
                 // set session attributes
                 $_SESSION['user'] = $user;
                 $_SESSION['pwd'] = $pwd;
@@ -111,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && strlen($_POST['username']) > 0)
 
 
 <form class="main form-center center" id="loginForm" action="<?php $_SERVER['PHP_SELF']?>" method="post">
-    <h3>Login to Empower Self Defense</h3>
+    <h3>Create a New Account</h3>
     <div class="form-group">
         <label for="username">Username</label>
         <input type="text" class="form-control" name="username" id="username" autofocus required>
@@ -123,35 +124,42 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && strlen($_POST['username']) > 0)
         <span class="error" id="login-note"><?php echo $login_error?></span>
     </div>
 
-    <input type="submit" id="loginSubmit" class="btn btn-primary" value="Submit">
+    <input type="submit" id="signinSubmit" class="btn btn-primary" value="Submit">
+    <input type="button" id="signinCancel" class="btn btn-secondary" value="Cancel">
 
-    <div>
-        <br>
-        <a href="signin.php" style="margin-top: 100px">
-            Create New Account
-        </a>
-    </div>
 </form>
 
 
 
 <?php
-function checkPassword($user, $pass){
+function checkUsername($user){
     require("connect-db.php");
-    $query = "SELECT * FROM login WHERE username = :username and password = :password";
+    $query = "SELECT * FROM login WHERE username = :username";
     $statement = $db->prepare($query);
     $statement->bindValue(":username", $user);
-    $statement->bindValue(":password", $pass);
     $statement->execute();
 
     $results = $statement->fetchAll();
     $statement->closecursor();
+    echo json_encode($results);
     return count($results);
+}
+
+function createAccount($user, $pass){
+    require("connect-db.php");
+    $query = "INSERT INTO login (username, password) VALUES (:username, :password)";
+    $statement = $db->prepare($query);
+    $statement->bindValue(":username", $user);
+    $statement->bindValue(":password", $pass);
+    $statement->execute();
+    $statement->closecursor();
 }
 ?>
 
 <!--need to get collapsible portion to work-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script src="mainJS.JS" type = "text/javascript"></script>
+
 </body>
 </html>

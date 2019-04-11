@@ -112,6 +112,13 @@ if(testSubmit != null && testCancel != null){
     testCancel.addEventListener("click", cancel);
 }
 
+signinCancel = document.getElementById("signinCancel");
+if(signinCancel != null){
+    signinCancel.addEventListener("click", function () {
+        window.location.href = "login.php";
+    });
+}
+
 
 
 author = document.getElementById("author");
