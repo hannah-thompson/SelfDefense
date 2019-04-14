@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="author" content="Hannah Thompson and Sarah Piekarski">
 
 </head>
 

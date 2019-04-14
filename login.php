@@ -1,3 +1,4 @@
+<!--Authors: Hannah Thompson and Sarah Piekarski-->
 <?php session_start();    // start session
 ?>
 
