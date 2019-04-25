@@ -7,12 +7,14 @@
 
 <body>
 <?php
+
+// note: changed these to own values
 $hostname = 'localhost:3306';
 
-$dbname = 'spiekarski';
+$dbname = 'hmt5wa';
 
-$username = 'spiekarski';
-$password = 'sjppassword';
+$username = 'hmt5wa';
+$password = 'password';
 
 $dsn = "mysql:host=$hostname;dbname=$dbname";
 
