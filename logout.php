@@ -45,7 +45,7 @@ if (count($_SESSION) > 0)
     session_destroy();     // complete terminate the session
 }
 
-header("Location: login.php");
+header("Location: http://localhost:4200/");
 ?>
 
 

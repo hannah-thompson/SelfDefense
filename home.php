@@ -113,7 +113,7 @@
     }
     else
     // redirect to the login page
-    header('Location: login.php');
+    header('Location: http://localhost:4200/');
 
     ?>
 

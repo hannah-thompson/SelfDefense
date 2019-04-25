@@ -3,28 +3,58 @@
 ?>
 
 <?php
+header('Access-Control-Allow-Origin: http://localhost:4200');
+header('Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token, Accept-Encoding');
+
 $login_error = NULL;
+
+// retrieve data from the request
+$postdata = file_get_contents("php://input");
+
+// process data
+// (this example simply extracts the data and restructures them back)
+$request = json_decode($postdata);
+
+//echo $request;
+
+$data = [];
+
+foreach ($request as $k => $v)
+{
+    $data[0][$k] = $v;
+}
+
+// sent response (in json format) back to the front end
+echo json_encode(['content'=>$data]);
+
 // Define a function to handle failed validation attempts
 function reject($entry)
 {
     exit();    // exit the current script, no value is returned
 }
 
-if ($_SERVER['REQUEST_METHOD'] == "POST" && strlen($_POST['username']) > 0)
+// $_SERVER['REQUEST_METHOD'] == "POST" &&
+if (strlen($request->username) > 0)
 {
-    $user = trim($_POST['username']);
+    $user = trim($request->username);
     if (!ctype_alnum($user))   // ctype_alnum() check if the values contain only alphanumeric data
+        $data[0]['issue'] = 'username';
+        echo json_encode(['content'=>$data]);
         reject('Username');
 
-    if (isset($_POST['pwd']))
+    if (isset($request->pwd))
     {
-        $pwd = trim($_POST['pwd']);
-        if (!ctype_alnum($pwd))
+        $pwd = trim($request->pwd);
+        if (!ctype_alnum($pwd)) {
+            $data[0]['issue'] = 'username';
+            echo json_encode(['content' => $data]);
             reject('Password');
-        else
+        }else
         {
             if(checkPassword($user, $pwd) == 0){
                 $login_error = "Username or password is incorrect, please try again";
+                $data[0]['issue'] = 'non-existent';
+                echo json_encode(['content' => $data]);
             }
             else {
                 // set session attributes
