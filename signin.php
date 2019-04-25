@@ -125,8 +125,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && strlen($_POST['username']) > 0)
     </div>
 
     <input type="submit" id="signinSubmit" class="btn btn-primary" value="Submit">
-    <input type="button" id="signinCancel" class="btn btn-secondary" value="Cancel">
-
+<!--    <input type="button" id="signinCancel" class="btn btn-secondary" value="Cancel" onclick="window.location='http://localhost:4200/';">-->
+<!--    change to direct back to our login module in Angular -->
+    <a href="http://localhost:4200/" class="btn btn-secondary" id="cancel" name="cancel" class="btn btn-default">Cancel</a>
 </form>
 
 
