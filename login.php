@@ -1,12 +1,12 @@
-<!--Authors: Hannah Thompson and Sarah Piekarski-->
-<?php session_start();    // start session
-?>
-
 <?php
 header('Access-Control-Allow-Origin: http://localhost:4200');
 header('Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token, Accept-Encoding');
 
-$login_error = NULL;
+
+session_start();    // start session (note to self: moved this)
+
+
+//$login_error = NULL;
 
 // retrieve data from the request
 $postdata = file_get_contents("php://input");
@@ -17,60 +17,55 @@ $request = json_decode($postdata);
 
 //echo $request;
 
-$data = [];
+$issue = "none";
 
-foreach ($request as $k => $v)
-{
-    $data[0][$k] = $v;
-}
+//// sent response (in json format) back to the front end
+//echo json_encode(['data'=>$response]);
 
-// sent response (in json format) back to the front end
-echo json_encode(['content'=>$data]);
-
-// Define a function to handle failed validation attempts
-function reject($entry)
-{
-    exit();    // exit the current script, no value is returned
-}
 
 // $_SERVER['REQUEST_METHOD'] == "POST" &&
 if (strlen($request->username) > 0)
 {
     $user = trim($request->username);
     if (!ctype_alnum($user))   // ctype_alnum() check if the values contain only alphanumeric data
-        $data[0]['issue'] = 'username';
-        echo json_encode(['content'=>$data]);
-        reject('Username');
+        $issue = "username";
+        // sent response (in json format) back to the front end
+        //reject('Username');
 
     if (isset($request->pwd))
     {
         $pwd = trim($request->pwd);
         if (!ctype_alnum($pwd)) {
-            $data[0]['issue'] = 'username';
-            echo json_encode(['content' => $data]);
-            reject('Password');
+            $issue = "password";
+            // sent response (in json format) back to the front end
+            //reject('Password');
         }else
         {
             if(checkPassword($user, $pwd) == 0){
-                $login_error = "Username or password is incorrect, please try again";
-                $data[0]['issue'] = 'non-existent';
-                echo json_encode(['content' => $data]);
+                //$login_error = "Username or password is incorrect, please try again";
+                $issue = "not in DB";
+                // sent response (in json format) back to the front end
             }
             else {
                 // set session attributes
                 $_SESSION['user'] = $user;
                 $_SESSION['pwd'] = $pwd;
 
+                $issue = "no issues here";
                 // redirect the browser to another page using the header() function to specify the target URL
-                header("Location: home.php");
+                // header("Location: home.php");
+                // sent response (in json format) back to the front end
             }
         }
     }
 }
-?>
 
+$response = [
+    'issue' => $issue
+];
 
-<?php
+echo json_encode(['data'=>$response]);
+
 function checkPassword($user, $pass){
     require("connect-db.php");
     $query = "SELECT * FROM login WHERE username = :username and password = :password";
@@ -83,4 +78,11 @@ function checkPassword($user, $pass){
     $statement->closecursor();
     return count($results);
 }
+
+// Define a function to handle failed validation attempts
+function reject($entry)
+{
+    exit();    // exit the current script, no value is returned
+}
+
 ?>
