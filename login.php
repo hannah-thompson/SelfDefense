@@ -17,7 +17,7 @@ $request = json_decode($postdata);
 
 //echo $request;
 
-$issue = "Please provide a username and password";
+$issue = "Please provide a username";
 
 //// sent response (in json format) back to the front end
 //echo json_encode(['data'=>$response]);

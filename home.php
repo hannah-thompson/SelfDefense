@@ -110,7 +110,8 @@
     </section>
 
         <?php
-    $_SESSION["user"] = $_GET["user"];}
+        if(isset($_GET['user'])){
+    $_SESSION["user"] = $_GET["user"];}}
     else
     // redirect to the login page
     header('Location: http://localhost:4200/');
