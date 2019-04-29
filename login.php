@@ -17,7 +17,7 @@ $request = json_decode($postdata);
 
 //echo $request;
 
-$issue = "none";
+$issue = "Please provide a username and password";
 
 //// sent response (in json format) back to the front end
 //echo json_encode(['data'=>$response]);
@@ -28,7 +28,7 @@ if (strlen($request->username) > 0)
 {
     $user = trim($request->username);
     if (!ctype_alnum($user))   // ctype_alnum() check if the values contain only alphanumeric data
-        $issue = "username";
+        $issue = "Please provide a username";
         // sent response (in json format) back to the front end
         //reject('Username');
 
@@ -36,14 +36,14 @@ if (strlen($request->username) > 0)
     {
         $pwd = trim($request->pwd);
         if (!ctype_alnum($pwd)) {
-            $issue = "password";
+            $issue = "Please provide a password";
             // sent response (in json format) back to the front end
             //reject('Password');
         }else
         {
             if(checkPassword($user, $pwd) == 0){
                 //$login_error = "Username or password is incorrect, please try again";
-                $issue = "not in DB";
+                $issue = "Username or password is incorrect, please try again or make a new account";
                 // sent response (in json format) back to the front end
             }
             else {

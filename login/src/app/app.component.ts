@@ -12,13 +12,13 @@ export class AppComponent {
   title = 'login';
 
   responsedata = null;
-  loginModel = new Login('hannah', 'password');
+  loginModel = new Login('', '');
 
   constructor(private http: HttpClient) { }
 
   senddata(data) {
     console.log(data);
-    this.responsedata = "connect";
+    this.responsedata = "";
 
     let params = JSON.stringify(data);
     console.log(params);
@@ -26,11 +26,13 @@ export class AppComponent {
     this.http.post('http://localhost/CS4640/SelfDefense/login.php', data)
       .subscribe((data) => {
         console.log('Got data from backend', data);
-        this.responsedata = 'through php';
-        this.responsedata = data;
+        this.responsedata = JSON.parse(JSON.stringify(data)).data.issue;
       }, (error) => {
         console.log('Error', error);
         this.responsedata = error;
       })
+    if(this.responsedata == "no issues here"){
+      window.location.href = 'http://localhost/CS4640/SelfDefense/home.php';
+    }
   }
 }

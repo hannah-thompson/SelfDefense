@@ -80,13 +80,10 @@
   </div>
 
   <div class="form-group">
-    <label for="password">Password</label>
+    <label for="pwd">Password</label>
     <input #password="ngModel" [(ngModel)]="loginModel.password" type="password" class="form-control" name="pwd" id="pwd" required>
-    <!--<span class="error" id="login-note"><?php echo $login_error?></span>-->
+    <span class="error" id="login-note" *ngIf="responsedata != 'no issues here' || ''">{{ responsedata }}</span>
   </div>
-
-  <!--using this to make sure data is sent properly-->
-  {{loginForm.value | json }}
 
   <button class="btn btn-primary" (click)="senddata(loginForm.value)">Submit</button>
 
@@ -97,9 +94,9 @@
     </a>
   </div>
 
-  {{responsedata | json}}
 
 </form>
+
 
 
 

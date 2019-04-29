@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="author" content="Hannah Thompson and Sarah Piekarski">
-
-</head>
-
-<body>
 <?php
 
 // note: changed these to own values
 $hostname = 'localhost:3306';
 
-$dbname = 'hmt5wa';
+$dbname = 'spiekarski';
 
-$username = 'hmt5wa';
-$password = 'password';
+$username = 'spiekarski';
+$password = 'sjppassword';
 
 $dsn = "mysql:host=$hostname;dbname=$dbname";
 
@@ -32,5 +24,3 @@ catch (Exception $e){
     echo "<p> Error message: $error_message </p>";
 }
 ?>
-</body>
-</html>
