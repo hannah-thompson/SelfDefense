@@ -13,11 +13,12 @@ export class AppComponent {
 
   responsedata = null;
   loginModel = new Login('', '');
+  username = "";
 
   constructor(private http: HttpClient) { }
 
   senddata(data) {
-    console.log(data);
+    this.username = data.username;
     this.responsedata = "";
 
     let params = JSON.stringify(data);
@@ -27,12 +28,13 @@ export class AppComponent {
       .subscribe((data) => {
         console.log('Got data from backend', data);
         this.responsedata = JSON.parse(JSON.stringify(data)).data.issue;
+        console.log(this.responsedata)
+        if(this.responsedata == 'no issues here'){
+          console.log("all good")
+          window.location.href = 'http://localhost/CS4640/SelfDefense/home.php?user='+this.username;}
       }, (error) => {
         console.log('Error', error);
         this.responsedata = error;
       })
-    if(this.responsedata == "no issues here"){
-      window.location.href = 'http://localhost/CS4640/SelfDefense/home.php';
-    }
   }
 }

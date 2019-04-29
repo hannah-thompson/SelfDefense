@@ -70,7 +70,7 @@
 
     <?php session_start(); // make sessions available ?>
     <?php
-    if (isset($_SESSION['user']))
+    if (isset($_SESSION['user']) or (isset($_GET["user"])))
     {
     ?>
 
@@ -110,7 +110,7 @@
     </section>
 
         <?php
-    }
+    $_SESSION["user"] = $_GET["user"];}
     else
     // redirect to the login page
     header('Location: http://localhost:4200/');
