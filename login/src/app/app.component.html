@@ -74,16 +74,21 @@
 
 <form #loginForm="ngForm" class="main form-center center" id="loginForm"  >
   <h3>Login to Empower Self Defense</h3>
-  <div class="form-group">
+  <div ngClass="form-group">
     <label for="username">Username</label>
     <input #username="ngModel" [(ngModel)]="loginModel.username" type="text" class="form-control" name="username" id="username" autofocus required>
-    <span class="error" id="login-note" *ngIf="responsedata != 'no issues here' || ''">{{ responsedata }}</span>
+    <span class="error" id="user-note" *ngIf="responsedata == 'Please provide a username'">{{ responsedata }}</span>
   </div>
 
   <div class="form-group">
     <label for="pwd">Password</label>
     <input #password="ngModel" [(ngModel)]="loginModel.password" type="password" class="form-control" name="pwd" id="pwd" required>
-    <span class="error" id="login-note" *ngIf="responsedata != 'no issues here' || ''">{{ responsedata }}</span>
+    <span class="error" id="login-note" [ngSwitch]="responsedata != 'Please provide a username' || ''">
+      <span *ngSwitchCase="'Please provide a password'">Please provide a password</span>
+      <span *ngSwitchCase="'Please provide a username and password'">Please provide a username and password</span>
+      <span *ngSwitchCase="'Username or password is incorrect, please try again or make a new account'">
+        Username or password is incorrect, please try again or make a new account</span>
+    </span>
   </div>
 
   <button class="btn btn-primary" (click)="senddata(loginForm.value)">Submit</button>
