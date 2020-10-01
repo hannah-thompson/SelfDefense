@@ -5,13 +5,13 @@ This website was created by Hannah Thompson and Sarah Piekarski as the final pro
 <img src="/login.png" width="400"> <img src="/newAccount.png" width="400">
 
 ## Home Page
-<img src="/home.png" width="200">
+<img src="/home.png" width="400">
 
 ## Videos
-<img src="/videos.png" width="200"> <img src="/focusVideo.png" width="200">
+<img src="/videos.png" width="400"> <img src="/focusVideo.png" width="400">
 
 ## Curriculum
-<img src="/curriculum.png" width="200"> <img src="/focusCurriculum.png" width="200">
+<img src="/curriculum.png" width="400"> <img src="/focusCurriculum.png" width="400">
 
 ## Testimonials
-<img src="/testimonials.png" width="200"> <img src="/writeTestimonials.png" width="200"> <img src="/errorMessaging.png" width="200">
+<img src="/testimonials.png" width="400"> <img src="/writeTestimonials.png" width="400"> <img src="/errorMessaging.png" width="400">
