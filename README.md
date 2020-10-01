@@ -1,4 +1,4 @@
-# SelfDefense
+# Empower Self Defense Website
 This website was created by Hannah Thompson and Sarah Piekarski as the final project of CS 4640. It includes login and account creation, self defense content in the forms of videos and curriculum, and the ability to post and read user testimonials.
 
 ## Login Implementation
