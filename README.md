@@ -2,7 +2,7 @@
 This website was created by Hannah Thompson and Sarah Piekarski as the final project of CS 4640. It includes login and account creation, self defense content in the forms of videos and curriculum, and the ability to post and read user testimonials.
 
 ## Login Implementation
-<img src="/login.png" width="200"> <img src="/newAccount.png" width="200">
+<img src="/login.png" width="400"> <img src="/newAccount.png" width="400">
 
 ## Home Page
 <img src="/home.png" width="200">
