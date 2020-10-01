@@ -14,4 +14,4 @@ This website was created by Hannah Thompson and Sarah Piekarski as the final pro
 <img src="/curriculum.png" width="400"> <img src="/focusCurriculum.png" width="400">
 
 ## Testimonials
-<img src="/testimonials.png" width="400"> <img src="/writeTestimonials.png" width="400"> <img src="/errorMessaging.png" width="400">
+<img src="/testimonials.png" width="400"> <img src="/writeTestimonial.png" width="400"> <img src="/errorMessaging.png" width="400">
